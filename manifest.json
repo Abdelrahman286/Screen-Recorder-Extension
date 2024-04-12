@@ -1,0 +1,39 @@
+{
+  "name": "loom clone",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "24": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabCapture",
+    "offscreen",
+    "scripting",
+    "storage",
+    "desktopCapture",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["camera.html", "camera.js", "video.html", "video.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
